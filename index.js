@@ -8,7 +8,7 @@ function calculateAsset(){
     return reduPercAsset;
 }
 
-function calculateIcome(){
+function calculateIncome(){
     var income = document.getElementById('balance').value;
     var reduPercIncome;
     var result = document.getElementById('reduPercIncome')
@@ -21,7 +21,7 @@ function calculateIcome(){
 function submit(){
     var annual = document.getElementById('annual').value;
     var asset = calculateAsset();
-    var income = calculateIcome();
+    var income = calculateIncome();
 
     console.log(asset)
     console.log(income)
