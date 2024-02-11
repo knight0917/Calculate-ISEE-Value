@@ -1,4 +1,4 @@
-function asset(){
+function calculateAsset(){
     var property = document.getElementById('property').value;
     var reduPercAsset;
     var result = document.getElementById('reduPercAsset')
@@ -8,7 +8,7 @@ function asset(){
     return reduPercAsset;
 }
 
-function income(){
+function calculateIcome(){
     var income = document.getElementById('balance').value;
     var reduPercIncome;
     var result = document.getElementById('reduPercIncome')
@@ -18,13 +18,16 @@ function income(){
     return reduPercIncome;
 }
 
-function submit(reduPercAsset, reduPercIncome){
+function submit(){
     var annual = document.getElementById('annual').value;
-    var asset = reduPercAsset;
-    var income = reduPercIncome;
+    var asset = calculateAsset();
+    var income = calculateIcome();
 
-    var sums = annual + asset + income;
+    console.log(asset)
+    console.log(income)
+
+    var sums = parseFloat(annual) + asset + income;  // make annual behave like float
     console.log(sums);
 }
 
-submit(asset(), income())
+
