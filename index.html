@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isse value</title>
+    <title>ISSE Calculator</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -45,7 +45,7 @@
                     <label for="members">Faimly members:</label>
                 </td>
                 <td>
-                    <input id="members" type="number">
+                    <input id="members" onkeyup="faimlyComposition()" type="number">
                 </td>
             </tr>
             <tr>
@@ -53,11 +53,14 @@
                     <label for="dismembers">Faimly members with disability:</label>
                 </td>
                 <td>
-                    <input id="dismembers" type="number">
+                    <input id="dismembers" onkeyup="calDisability()" type="number">
                 </td>
             </tr>
         </table>
-        <button onclick="submit()">Submit</button>
+        <div class="btn-submit">
+            <button onclick="submit()">Submit</button>
+        </div>
+        <h2 class="h2result">Your ISSE value is: <h1 id="isseValue" class="h1result"> </h2></h1>
     </div>
     <script src="./index.js"></script>
 </body>
