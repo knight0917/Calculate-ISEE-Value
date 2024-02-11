@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isse value</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Calculate your ISEE value</h1>
+        <table class="main-form">
+            <tr>
+                <td>
+                    <label for="annual">Faimly's annual income:</label>
+                </td>
+                <td>
+                    <input id="annual" type="number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="property">Faimly's real state properties:</label>
+                </td>
+                <td>
+                    <input id="property" onkeyup="asset()" type="number">
+                </td>
+                <td>
+                    <p>After 20%:<p id="reduPercAsset"> </p></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="balance">Faimly's bank account balance:</label>
+                </td>
+                <td>
+                    <input id="balance" onkeyup="income()" type="number">
+                </td>
+                <td>
+                    <p>After 20%:<p id="reduPercIncome"> </p></p>
+                </td>
+            </tr>
+        </table>
+        <button onclick="submit()">Submit</button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
