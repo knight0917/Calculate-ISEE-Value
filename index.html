@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="main">
+        <p class="note">Note: Use desktop mode for better interaction</p>
         <h1>Calculate your ISEE value</h1>
         <table class="main-form">
             <tr>
@@ -15,7 +16,7 @@
                     <label for="annual">Faimly's annual income:</label>
                 </td>
                 <td>
-                    <input id="annual" type="number">
+                    <input id="annual" type="number" required>
                 </td>
             </tr>
             <tr>
@@ -23,7 +24,7 @@
                     <label for="property">Faimly's real state properties:</label>
                 </td>
                 <td>
-                    <input id="property" onkeyup="calculateAsset()" type="number">
+                    <input id="property" onkeyup="calculateAsset()" type="number" required>
                 </td>
                 <td>
                     <p>After 20%:<p id="reduPercAsset"> </p></p>
@@ -34,7 +35,7 @@
                     <label for="balance">Faimly's bank account balance:</label>
                 </td>
                 <td>
-                    <input id="balance" onkeyup="calculateIncome()" type="number">
+                    <input id="balance" onkeyup="calculateIncome()" type="number" required>
                 </td>
                 <td>
                     <p>After 20%:<p id="reduPercIncome"> </p></p>
@@ -45,7 +46,7 @@
                     <label for="members">Faimly members:</label>
                 </td>
                 <td>
-                    <input id="members" onkeyup="faimlyComposition()" type="number">
+                    <input id="members" onkeyup="faimlyComposition()" type="number" required>
                 </td>
             </tr>
             <tr>
