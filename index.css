@@ -36,6 +36,9 @@ p{
 td{
     font-size: 30px;
 }
+.head-para{
+    text-decoration: underline;
+}
 button{
     font-size: 20px;
     border: 2px solid aquamarine;
