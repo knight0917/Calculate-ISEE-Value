@@ -12,20 +12,22 @@
   </head>
   <body class="h-screen flex flex-col justify-center items-center bg-pink-900">
     <div
-      class="max-w-screen-lg flex flex-col md:flex-row mx-auto p-8 bg-pink-990/80 rounded-lg shadow-lg w-full shadow-2x1 animate pop delay-2"
+      class="max-w-screen-lg justify-center flex flex-col md:flex-row mx-auto p-8 bg-pink-990/80 rounded-lg shadow-lg w-full shadow-3xl animate pop delay-2"
     >
       <div class="md:w-1/2 mb-8 md:mb-0 m-8">
-        <h1 class="text-3xl font-bold">Calculate your ISEE value</h1>
-        <p class="font-semibold">You must put your data in Euro.</p>
+        <h1 class="text-4xl font-bold">Calculate your ISEE value</h1>
+        <p class="font-semibold font-mono">You must put your data in Euro.</p>
         <div class="mb-4">
-          <label class="block mb-1">Family's annual income:</label>
+          <label class="block mb-1 text-2xl">Family's annual income:</label>
           <input
             id="annual"
             class="w-full border border-white-300 rounded-md py-2 px-3 bg-pink-900 focus:outline-none focus:border-white-900"
             type="number"
             required
           />
-          <label class="block mb-1">Family's real state properties:</label>
+          <label class="block mb-1 text-2xl"
+            >Family's real state properties:</label
+          >
           <input
             id="property"
             class="w-full border border-white-300 rounded-md py-2 px-3 bg-pink-900 focus:outline-none focus:border-white-900"
@@ -34,7 +36,9 @@
             required
           />
           <label>After 20%: <label id="reduPercAsset"></label></label>
-          <label class="block mb-1">Family's bank account balance:</label>
+          <label class="block mb-1 text-2xl"
+            >Family's bank account balance:</label
+          >
           <input
             id="balance"
             class="w-full border border-white-300 rounded-md py-2 px-3 bg-pink-900 focus:outline-none focus:border-white-900"
@@ -43,7 +47,7 @@
             required
           />
           <label>After 20%: <label id="reduPercIncome"> </label></label>
-          <label class="block mb-1">Family members:</label>
+          <label class="block mb-1 text-2xl">Family members:</label>
           <input
             id="members"
             class="w-full border border-white-300 rounded-md py-2 px-3 bg-pink-900 focus:outline-none focus:border-white-900"
@@ -51,7 +55,9 @@
             type="number"
             required
           />
-          <label class="block mb-1">Family members with disability:</label>
+          <label class="block mb-1 text-2xl"
+            >Family members with disability:</label
+          >
           <input
             id="dismembers"
             class="w-full border border-white-300 rounded-md py-2 px-3 bg-pink-900 focus:outline-none focus:border-white-900"
@@ -60,9 +66,14 @@
           />
         </div>
         <div class="btn-submit">
-          <button onclick="submit()">Submit</button>
+          <button
+            onclick="submit()"
+            class="w-full border rounded-md px-3 py-2 text-2xl shadow-sm hover:bg-pink-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+          >
+            Submit
+          </button>
         </div>
-        <label class="h2result"
+        <label class="h2result text-3xl"
           >Your ISSE value is: <label id="isseValue" class="h1result"> </label
         ></label>
       </div>
