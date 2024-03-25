@@ -1,72 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ISSE Calculator</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <div class="main">
-        <p class="note">Note: Use desktop mode in mobile view for better interaction</p>
-        <h1>Calculate your ISEE value</h1>
-        <p class="head-para">You must put your data in Euro.</p>
-        <table class="main-form">
-            <tr>
-                <td>
-                    <label for="annual">Family's annual income:</label>
-                </td>
-                <td>
-                    <input id="annual" type="number" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="property">Family's real state properties:</label>
-                </td>
-                <td>
-                    <input id="property" onkeyup="calculateAsset()" type="number" required>
-                </td>
-                <td>
-                    <p>After 20%:<p id="reduPercAsset"> </p></p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="balance">Family's bank account balance:</label>
-                </td>
-                <td>
-                    <input id="balance" onkeyup="calculateIncome()" type="number" required>
-                </td>
-                <td>
-                    <p>After 20%:<p id="reduPercIncome"> </p></p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="members">Family members:</label>
-                </td>
-                <td>
-                    <input id="members" onkeyup="FamilyComposition()" type="number" required>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="dismembers">Family members with disability:</label>
-                </td>
-                <td>
-                    <input id="dismembers" onkeyup="calDisability()" type="number">
-                </td>
-            </tr>
-        </table>
-        <div class="btn-submit">
-            <button onclick="submit()">Submit</button>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="h-screen flex flex-col justify-center items-center bg-pink-900">
+    <div
+      class="max-w-screen-lg flex flex-col md:flex-row mx-auto p-8 bg-pink-990/80 rounded-lg shadow-lg w-full shadow-2x1 animate pop delay-2"
+    >
+      <div class="md:w-1/2 mb-8 md:mb-0 m-8">
+        <h1 class="text-3xl font-bold">Calculate your ISEE value</h1>
+        <p class="font-semibold">You must put your data in Euro.</p>
+        <div class="mb-4">
+          <label class="block mb-1">Family's annual income:</label>
+          <input
+            id="annual"
+            class="w-full border border-white-300 rounded-md py-2 px-3 bg-pink-900 focus:outline-none focus:border-white-900"
+            type="number"
+            required
+          />
+          <label class="block mb-1">Family's real state properties:</label>
+          <input
+            id="property"
+            class="w-full border border-white-300 rounded-md py-2 px-3 bg-pink-900 focus:outline-none focus:border-white-900"
+            onkeyup="calculateAsset()"
+            type="number"
+            required
+          />
+          <label>After 20%: <label id="reduPercAsset"></label></label>
+          <label class="block mb-1">Family's bank account balance:</label>
+          <input
+            id="balance"
+            class="w-full border border-white-300 rounded-md py-2 px-3 bg-pink-900 focus:outline-none focus:border-white-900"
+            onkeyup="calculateIncome()"
+            type="number"
+            required
+          />
+          <label>After 20%: <label id="reduPercIncome"> </label></label>
+          <label class="block mb-1">Family members:</label>
+          <input
+            id="members"
+            class="w-full border border-white-300 rounded-md py-2 px-3 bg-pink-900 focus:outline-none focus:border-white-900"
+            onkeyup="FamilyComposition()"
+            type="number"
+            required
+          />
+          <label class="block mb-1">Family members with disability:</label>
+          <input
+            id="dismembers"
+            class="w-full border border-white-300 rounded-md py-2 px-3 bg-pink-900 focus:outline-none focus:border-white-900"
+            onkeyup="calDisability()"
+            type="number"
+          />
         </div>
-        <h2 class="h2result">Your ISSE value is: <h1 id="isseValue" class="h1result"> </h2></h1>
+        <div class="btn-submit">
+          <button onclick="submit()">Submit</button>
+        </div>
+        <label class="h2result"
+          >Your ISSE value is: <label id="isseValue" class="h1result"> </label
+        ></label>
+      </div>
     </div>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
-
-
-
